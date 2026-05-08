@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout
+  title="Blog"
+  description="Property insights, buyer tips, and market analysis from I Wish Home — Melbourne's buyer's agency."
+>
+
+  <section class="page-hero section">
+    <div class="container">
+      <span class="tag">Blog</span>
+      <h1>Property Insights for Buyers</h1>
+      <div class="divider"></div>
+      <p>Practical advice and market analysis to help you navigate Melbourne's property market with confidence.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      {posts.length === 0 ? (
+        <p>No posts yet — check back soon.</p>
+      ) : (
+        <div class="posts-grid">
+          {posts.map(post => (
+            <a href={`/blog/${post.slug}`} class="post-card card">
+              <div class="post-card-body">
+                <div class="post-meta">
+                  <span class="tag tag--sm">{post.data.category}</span>
+                  <time datetime={post.data.pubDate.toISOString()} class="post-date">
+                    {formatDate(post.data.pubDate)}
+                  </time>
+                </div>
+                <h2 class="post-title">{post.data.title}</h2>
+                <p class="post-desc">{post.data.description}</p>
+                <div class="post-footer">
+                  <span class="post-author">By {post.data.author}</span>
+                  <span class="read-link">Read →</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section cta-section">
+    <div class="container cta-inner">
+      <h2>Get Property Insights in Your Inbox</h2>
+      <p>Occasional, no-fluff updates on the Melbourne market — auction clearance trends, off-market opportunities, and buyer strategy.</p>
+      <a href="/contact" class="btn btn--light">Get in Touch</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-hero .tag { margin-bottom: 1.25rem; }
+  .page-hero h1 { margin-bottom: 0.5rem; }
+  .page-hero p { color: var(--color-text-muted); font-size: 1.05rem; margin-top: 0.5rem; }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .post-card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tag--sm {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.7rem;
+  }
+
+  .post-date {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+  }
+
+  .post-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    font-family: var(--font-serif);
+  }
+
+  .post-desc {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+  }
+
+  .post-author { color: var(--color-text-muted); }
+
+  .read-link {
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #2e1f14 100%);
+  }
+
+  .cta-inner {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 { color: var(--color-bg); margin-bottom: 1rem; }
+  .cta-inner p { color: rgba(250,247,242,0.75); margin: 0 auto 2rem; }
+</style>

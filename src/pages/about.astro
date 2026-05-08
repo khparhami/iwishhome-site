@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const values = [
+  {
+    title: 'Exclusively Buyer-Side',
+    desc: 'I never act for vendors. My only job is to get you the best possible outcome as a buyer.',
+  },
+  {
+    title: 'Data-Led Decisions',
+    desc: 'Every offer and auction strategy is grounded in comparable sales data — not gut feeling or pressure.',
+  },
+  {
+    title: 'Radical Transparency',
+    desc: "I'll tell you when a property isn't worth what the agent is asking, even if that means we walk away.",
+  },
+  {
+    title: 'Long-Term Thinking',
+    desc: 'The right home today sets you up for the future. I assess resale, rental yield, and growth potential on everything.',
+  },
+];
+
+const credentials = [
+  'Licensed Buyer\'s Agent — Consumer Affairs Victoria',
+  'Member, Real Estate Buyers Agents Association (REBAA)',
+  '10+ years in Melbourne property — both as an investor and buyer\'s agent',
+  'Specialist in inner-north and inner-east Melbourne suburbs',
+];
+---
+
+<BaseLayout
+  title="About Alex Javan"
+  description="Alex Javan is a Melbourne-based buyer's agent and the founder of I Wish Home. Learn about his background, credentials, and approach to buyer advocacy."
+>
+
+  <!-- Page hero -->
+  <section class="about-hero section">
+    <div class="container about-hero-inner">
+      <div class="about-hero-content">
+        <span class="tag">About</span>
+        <h1>Hi, I'm Alex Javan</h1>
+        <div class="divider"></div>
+        <p class="lead">
+          I founded I Wish Home because I watched too many good buyers overpay, miss out, or settle for the wrong property —
+          not because they weren't smart, but because they were fighting a rigged game.
+        </p>
+        <p>
+          Selling agents are professionals trained to maximise the vendor's outcome. Buyers deserve the same level of expertise
+          in their corner. That's what I do.
+        </p>
+      </div>
+
+      <div class="about-hero-photo" aria-hidden="true">
+        <div class="photo-placeholder">
+          <span>AJ</span>
+        </div>
+        <div class="photo-caption">
+          <strong>Alex Javan</strong>
+          <span>Founder &amp; Lead Buyer's Agent</span>
+          <span>Melbourne, VIC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="section section--alt">
+    <div class="container bio-inner">
+      <div class="bio-text">
+        <h2>My Background</h2>
+        <div class="divider"></div>
+        <p>
+          Before becoming a buyer's agent, I spent a decade navigating Melbourne's property market as a buyer and investor.
+          I experienced first-hand what it feels like to lose at auction after months of searching, to be misled about a property's
+          condition, and to pay more than I should have simply because I didn't know what I didn't know.
+        </p>
+        <p>
+          That experience shaped how I work with clients today. I don't just find properties — I protect buyers from the
+          costly mistakes I made when I was on the other side of the table.
+        </p>
+        <p>
+          I specialise in Melbourne's inner north and inner east: Brunswick, Fitzroy, Northcote, Collingwood, Richmond, Kew,
+          and surrounding suburbs. These are markets I know intimately — the streets, the agents, the off-market networks,
+          and the pricing nuances that only come from years on the ground.
+        </p>
+      </div>
+
+      <div class="credentials-box">
+        <h3>Credentials &amp; Memberships</h3>
+        <ul>
+          {credentials.map(c => (
+            <li>
+              <span class="cred-icon">✓</span>
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">How I Work</span>
+        <h2>What You Can Expect</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="values-grid">
+        {values.map(v => (
+          <div class="value-card">
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container cta-inner">
+      <h2>Let's Talk About Your Search</h2>
+      <p>
+        Book a free 30-minute call. No sales pitch — just a straightforward conversation about where you are in your
+        property journey and whether working together makes sense.
+      </p>
+      <a href="/contact" class="btn btn--light">Book a Free Call</a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .about-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .about-hero-content .tag { margin-bottom: 1.25rem; }
+
+  .about-hero-content h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .about-hero-content p:last-child {
+    color: var(--color-text-muted);
+  }
+
+  .about-hero-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding-top: 1rem;
+  }
+
+  .photo-placeholder {
+    width: 280px;
+    height: 340px;
+    background: linear-gradient(135deg, var(--color-bg-alt), var(--color-border));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-md);
+  }
+
+  .photo-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    text-align: center;
+  }
+
+  .photo-caption strong {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: var(--color-accent);
+  }
+
+  .photo-caption span {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Bio section */
+  .bio-inner {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .bio-text h2 { margin-bottom: 0.5rem; }
+
+  .bio-text p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.1rem;
+    max-width: 60ch;
+  }
+
+  .credentials-box {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    position: sticky;
+    top: 96px;
+  }
+
+  .credentials-box h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .credentials-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .credentials-box li {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: rgba(250,247,242,0.85);
+    line-height: 1.5;
+    align-items: flex-start;
+  }
+
+  .cred-icon {
+    color: var(--color-primary);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  /* Values */
+  .section-header {
+    max-width: 640px;
+    margin-bottom: 3rem;
+  }
+
+  .section-header .tag { margin-bottom: 1rem; }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .value-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+
+  .value-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .value-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+  }
+
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #2e1f14 100%);
+  }
+
+  .cta-inner {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 { color: var(--color-bg); margin-bottom: 1rem; }
+
+  .cta-inner p {
+    color: rgba(250,247,242,0.75);
+    margin: 0 auto 2rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .about-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .about-hero-photo { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+    .photo-placeholder { width: 160px; height: 200px; font-size: 2rem; }
+    .bio-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .credentials-box { position: static; }
+  }
+
+  @media (max-width: 560px) {
+    .about-hero-photo { flex-direction: column; align-items: flex-start; }
+  }
+</style>

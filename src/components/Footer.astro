@@ -1,0 +1,183 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo" aria-label="I Wish Home">
+        <span class="logo-mark">IWH</span>
+        <div class="logo-text">
+          <span class="logo-title">I Wish Home</span>
+          <span class="logo-sub">Buyer's Agency</span>
+        </div>
+      </a>
+      <p class="footer-tagline">
+        Helping Australians buy the right home at the right price — without the stress.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Alex</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/#services">Full Search Service</a></li>
+          <li><a href="/#services">Auction Bidding</a></li>
+          <li><a href="/#services">Property Assessment</a></li>
+          <li><a href="/#services">Off-Market Access</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:alex@iwishhome.com.au">alex@iwishhome.com.au</a></li>
+          <li><a href="tel:+61400000000">0400 000 000</a></li>
+          <li>Melbourne, VIC, Australia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {year} I Wish Home Pty Ltd. All rights reserved.</p>
+      <p>Licensed Buyer's Agent &middot; ABN XX XXX XXX XXX</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    margin-top: 5rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 4rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .footer-brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+
+  .logo-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-bg);
+  }
+
+  .logo-sub {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  .footer-tagline {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(250,247,242,0.75);
+    max-width: 30ch;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-col h4 {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-col a,
+  .footer-col li {
+    font-size: 0.9rem;
+    color: rgba(250,247,242,0.75);
+    transition: color 0.15s;
+  }
+
+  .footer-col a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(250,247,242,0.12);
+    padding: 1.25rem 0;
+  }
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom p {
+    font-size: 0.82rem;
+    color: rgba(250,247,242,0.5);
+    max-width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 3rem 1.25rem;
+    }
+    .footer-links { grid-template-columns: repeat(2, 1fr); }
+    .footer-tagline { max-width: 100%; }
+  }
+
+  @media (max-width: 560px) {
+    .footer-links { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Alex Javan at I Wish Home. Book a free 30-minute discovery call to discuss your property search in Melbourne."
+>
+
+  <section class="page-hero section">
+    <div class="container">
+      <span class="tag">Contact</span>
+      <h1>Let's Talk Property</h1>
+      <div class="divider"></div>
+      <p>Book a free 30-minute call, or send a message below. No pitch, no obligation — just a straightforward conversation about your search.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container contact-layout">
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <h2>Send a Message</h2>
+        <p class="form-intro">Fill in the details below and Alex will get back to you within one business day.</p>
+
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          action="mailto:alex@iwishhome.com.au"
+          enctype="text/plain"
+        >
+          <div class="field-row">
+            <div class="field">
+              <label for="first-name">First name <span class="required">*</span></label>
+              <input id="first-name" name="first-name" type="text" required autocomplete="given-name" placeholder="Sarah" />
+            </div>
+            <div class="field">
+              <label for="last-name">Last name <span class="required">*</span></label>
+              <input id="last-name" name="last-name" type="text" required autocomplete="family-name" placeholder="Johnson" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address <span class="required">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="0400 000 000" />
+          </div>
+
+          <div class="field">
+            <label for="budget">Approximate budget</label>
+            <select id="budget" name="budget">
+              <option value="">Select a range</option>
+              <option>Under $700k</option>
+              <option>$700k – $1M</option>
+              <option>$1M – $1.5M</option>
+              <option>$1.5M – $2M</option>
+              <option>$2M+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">What are you looking for? <span class="required">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="5"
+              placeholder="Tell me about your ideal property — suburbs, must-haves, timeline, and any challenges you've faced so far."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary submit-btn">Send Message</button>
+          <p class="form-note">Or email directly: <a href="mailto:alex@iwishhome.com.au">alex@iwishhome.com.au</a></p>
+        </form>
+      </div>
+
+      <!-- Contact info sidebar -->
+      <aside class="contact-sidebar">
+        <div class="info-card">
+          <h3>Get in Touch</h3>
+
+          <div class="info-item">
+            <span class="info-icon">✉</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:alex@iwishhome.com.au">alex@iwishhome.com.au</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+61400000000">0400 000 000</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Location</strong>
+              <span>Melbourne, VIC, Australia</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Response time</strong>
+              <span>Within 1 business day</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="free-call-card">
+          <h3>Free Discovery Call</h3>
+          <p>
+            A 30-minute call to understand your brief, answer your questions, and outline how I can help.
+            Zero obligation.
+          </p>
+          <ul>
+            <li>✓ Discuss your suburb shortlist</li>
+            <li>✓ Understand current market conditions</li>
+            <li>✓ Learn how buyer advocacy works</li>
+            <li>✓ Get clear on your next steps</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-hero .tag { margin-bottom: 1.25rem; }
+  .page-hero h1 { margin-bottom: 0.5rem; }
+  .page-hero p { color: var(--color-text-muted); font-size: 1.05rem; margin-top: 0.5rem; }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* Form */
+  .contact-form-wrap h2 { margin-bottom: 0.5rem; }
+
+  .form-intro {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .field label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .required { color: var(--color-primary-dark); }
+
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    width: 100%;
+  }
+
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(201,169,110,0.15);
+  }
+
+  .field textarea { resize: vertical; min-height: 120px; }
+
+  .submit-btn { align-self: flex-start; }
+
+  .form-note {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    max-width: 100%;
+  }
+
+  .form-note a {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+
+  /* Sidebar */
+  .contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 96px;
+  }
+
+  .info-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .info-item:last-child { border-bottom: none; }
+
+  .info-icon {
+    font-size: 1.1rem;
+    width: 24px;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+  }
+
+  .info-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .info-item strong {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .info-item a,
+  .info-item span {
+    font-size: 0.92rem;
+    color: var(--color-text);
+  }
+
+  .info-item a:hover { color: var(--color-primary-dark); }
+
+  .free-call-card {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 1.75rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .free-call-card h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .free-call-card p {
+    font-size: 0.9rem;
+    color: rgba(250,247,242,0.8);
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+  }
+
+  .free-call-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .free-call-card li {
+    font-size: 0.88rem;
+    color: rgba(250,247,242,0.85);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .contact-sidebar { position: static; }
+  }
+
+  @media (max-width: 560px) {
+    .field-row { grid-template-columns: 1fr; }
+  }
+</style>
