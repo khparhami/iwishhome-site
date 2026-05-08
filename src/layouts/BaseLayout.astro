@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "I Wish Home is a Melbourne-based buyer's agency helping Australians find and secure their ideal property — without the stress.",
+  description = "I Wish Home is a Sydney-based buyer's agency helping Australians find and secure their ideal property — without the stress.",
   image = '/og-default.jpg',
   noindex = false,
 } = Astro.props;
@@ -65,8 +65,8 @@ const fullTitle = title === 'I Wish Home' ? title : `${title} | I Wish Home`;
       "email": "alex@iwishhome.com.au",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Melbourne",
-        "addressRegion": "VIC",
+        "addressLocality": "Sydney",
+        "addressRegion": "NSW",
         "addressCountry": "AU"
       },
       "founder": {

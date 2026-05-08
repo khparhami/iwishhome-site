@@ -21,16 +21,16 @@ const values = [
 ];
 
 const credentials = [
-  'Licensed Buyer\'s Agent — Consumer Affairs Victoria',
+  'Licensed Buyer\'s Agent — NSW Fair Trading',
   'Member, Real Estate Buyers Agents Association (REBAA)',
-  '10+ years in Melbourne property — both as an investor and buyer\'s agent',
-  'Specialist in inner-north and inner-east Melbourne suburbs',
+  '10+ years in Sydney property — both as an investor and buyer\'s agent',
+  'Specialist in inner-city and lower-north Sydney suburbs',
 ];
 ---
 
 <BaseLayout
   title="About Alex Javan"
-  description="Alex Javan is a Melbourne-based buyer's agent and the founder of I Wish Home. Learn about his background, credentials, and approach to buyer advocacy."
+  description="Alex Javan is a Sydney-based buyer's agent and the founder of I Wish Home. Learn about his background, credentials, and approach to buyer advocacy."
 >
 
   <!-- Page hero -->
@@ -50,14 +50,19 @@ const credentials = [
         </p>
       </div>
 
-      <div class="about-hero-photo" aria-hidden="true">
-        <div class="photo-placeholder">
-          <span>AJ</span>
-        </div>
+      <div class="about-hero-photo">
+        <img
+          src="/alex-javan.jpg"
+          alt="Alex Javan — Founder of I Wish Home"
+          class="alex-photo"
+          width="280"
+          height="340"
+          loading="eager"
+        />
         <div class="photo-caption">
           <strong>Alex Javan</strong>
           <span>Founder &amp; Lead Buyer's Agent</span>
-          <span>Melbourne, VIC</span>
+          <span>Sydney, NSW</span>
         </div>
       </div>
     </div>
@@ -70,7 +75,7 @@ const credentials = [
         <h2>My Background</h2>
         <div class="divider"></div>
         <p>
-          Before becoming a buyer's agent, I spent a decade navigating Melbourne's property market as a buyer and investor.
+          Before becoming a buyer's agent, I spent a decade navigating Sydney's property market as a buyer and investor.
           I experienced first-hand what it feels like to lose at auction after months of searching, to be misled about a property's
           condition, and to pay more than I should have simply because I didn't know what I didn't know.
         </p>
@@ -79,7 +84,7 @@ const credentials = [
           costly mistakes I made when I was on the other side of the table.
         </p>
         <p>
-          I specialise in Melbourne's inner north and inner east: Brunswick, Fitzroy, Northcote, Collingwood, Richmond, Kew,
+          I specialise in Sydney's inner city and lower north shore: Surry Hills, Newtown, Glebe, Balmain, Kirribilli, Neutral Bay,
           and surrounding suburbs. These are markets I know intimately — the streets, the agents, the off-market networks,
           and the pricing nuances that only come from years on the ground.
         </p>
@@ -167,19 +172,12 @@ const credentials = [
     padding-top: 1rem;
   }
 
-  .photo-placeholder {
+  .alex-photo {
     width: 280px;
     height: 340px;
-    background: linear-gradient(135deg, var(--color-bg-alt), var(--color-border));
+    object-fit: cover;
+    object-position: center top;
     border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-serif);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    letter-spacing: 0.05em;
     box-shadow: var(--shadow-md);
   }
 
@@ -318,7 +316,7 @@ const credentials = [
       gap: 3rem;
     }
     .about-hero-photo { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
-    .photo-placeholder { width: 160px; height: 200px; font-size: 2rem; }
+    .alex-photo { width: 160px; height: 200px; }
     .bio-inner { grid-template-columns: 1fr; gap: 2.5rem; }
     .credentials-box { position: static; }
   }
