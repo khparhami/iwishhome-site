@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#120a05"/>
+      <stop offset="100%" stop-color="#3A2318"/>
+    </linearGradient>
+    <linearGradient id="facade-upper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A2418"/>
+      <stop offset="100%" stop-color="#2C1A10"/>
+    </linearGradient>
+    <linearGradient id="facade-lower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2C1A10"/>
+      <stop offset="100%" stop-color="#1E1008"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5C4030"/>
+      <stop offset="100%" stop-color="#1a0d07"/>
+    </linearGradient>
+    <radialGradient id="moon-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9A96E" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#C9A96E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="win-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4A843" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C9A96E" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="lamp-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4A843" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D4A843" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="500" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <circle cx="55"  cy="38"  r="1.5" fill="#FAF7F2" opacity="0.7"/>
+  <circle cx="140" cy="22"  r="1"   fill="#FAF7F2" opacity="0.5"/>
+  <circle cx="210" cy="50"  r="1"   fill="#FAF7F2" opacity="0.4"/>
+  <circle cx="370" cy="18"  r="1.5" fill="#FAF7F2" opacity="0.6"/>
+  <circle cx="450" cy="40"  r="1"   fill="#FAF7F2" opacity="0.5"/>
+  <circle cx="530" cy="20"  r="2"   fill="#FAF7F2" opacity="0.55"/>
+  <circle cx="570" cy="55"  r="1"   fill="#FAF7F2" opacity="0.4"/>
+  <circle cx="88"  cy="72"  r="1"   fill="#FAF7F2" opacity="0.35"/>
+  <circle cx="495" cy="75"  r="1.5" fill="#FAF7F2" opacity="0.45"/>
+
+  <!-- Moon -->
+  <circle cx="510" cy="75" r="70" fill="url(#moon-glow)"/>
+  <circle cx="510" cy="75" r="22" fill="#C9A96E" opacity="0.18"/>
+  <circle cx="510" cy="75" r="16" fill="#C9A96E" opacity="0.22"/>
+
+  <!-- Background tree silhouettes -->
+  <ellipse cx="85"  cy="230" rx="55" ry="95" fill="#0d0603" opacity="0.9"/>
+  <rect    x="77"   y="305"  width="16" height="95" fill="#0d0603" opacity="0.9"/>
+  <ellipse cx="515" cy="210" rx="60" ry="105" fill="#0d0603" opacity="0.85"/>
+  <rect    x="507"  y="295"  width="16" height="105" fill="#0d0603" opacity="0.85"/>
+  <!-- Smaller trees -->
+  <ellipse cx="45"  cy="280" rx="30" ry="55" fill="#0d0603" opacity="0.7"/>
+  <ellipse cx="555" cy="270" rx="35" ry="60" fill="#0d0603" opacity="0.7"/>
+
+  <!-- Ground -->
+  <rect x="0" y="405" width="600" height="95" fill="url(#ground)"/>
+  <!-- Garden lawn -->
+  <rect x="100" y="400" width="400" height="15" fill="#2A1A0E" opacity="0.7"/>
+
+  <!-- Path to door -->
+  <path d="M265 500 L278 405 L322 405 L335 500 Z" fill="#4A3020" opacity="0.7"/>
+  <line x1="300" y1="405" x2="300" y2="500" stroke="#6A4828" stroke-width="2" opacity="0.3" stroke-dasharray="8 6"/>
+
+  <!-- ── HOUSE ── -->
+
+  <!-- Roof -->
+  <polygon points="90,190 300,70 510,190" fill="#150c05"/>
+  <!-- Roof highlight ridge -->
+  <line x1="90" y1="190" x2="300" y2="70" stroke="#C9A96E" stroke-width="1" opacity="0.15"/>
+  <line x1="300" y1="70" x2="510" y2="190" stroke="#C9A96E" stroke-width="1" opacity="0.15"/>
+
+  <!-- Chimney left -->
+  <rect x="168" y="88"  width="32" height="90" fill="#1C1008"/>
+  <rect x="163" y="83"  width="42" height="10" fill="#2C1A10"/>
+  <rect x="163" y="83"  width="42" height="4"  fill="#C9A96E" opacity="0.3"/>
+  <!-- Smoke -->
+  <circle cx="184" cy="72" r="7"  fill="#2A1A0E" opacity="0.35"/>
+  <circle cx="188" cy="58" r="6"  fill="#2A1A0E" opacity="0.25"/>
+  <circle cx="183" cy="45" r="5"  fill="#2A1A0E" opacity="0.15"/>
+
+  <!-- Chimney right -->
+  <rect x="400" y="100" width="30" height="80" fill="#1C1008"/>
+  <rect x="396" y="95"  width="38" height="10" fill="#2C1A10"/>
+  <rect x="396" y="95"  width="38" height="4"  fill="#C9A96E" opacity="0.25"/>
+
+  <!-- ── Upper floor ── -->
+  <rect x="100" y="190" width="400" height="115" fill="url(#facade-upper)"/>
+  <!-- Decorative cornice -->
+  <rect x="100" y="190" width="400" height="7"  fill="#C9A96E" opacity="0.35"/>
+  <rect x="100" y="195" width="400" height="2"  fill="#FAF7F2" opacity="0.05"/>
+
+  <!-- Upper window L -->
+  <rect x="130" y="210" width="75" height="80" rx="2" fill="#C9A96E" opacity="0.08"/>
+  <rect x="131" y="211" width="73" height="78" rx="1" fill="#D4A843" opacity="0.14"/>
+  <rect x="130" y="210" width="75" height="80" rx="2" fill="none" stroke="#C9A96E" stroke-width="2"/>
+  <line x1="167" y1="210" x2="167" y2="290" stroke="#C9A96E" stroke-width="1.2" opacity="0.45"/>
+  <line x1="130" y1="250" x2="205" y2="250" stroke="#C9A96E" stroke-width="1.2" opacity="0.45"/>
+  <!-- Sill -->
+  <rect x="127" y="288" width="81" height="5" fill="#C9A96E" opacity="0.3"/>
+
+  <!-- Upper window C -->
+  <rect x="262" y="210" width="75" height="80" rx="2" fill="#C9A96E" opacity="0.1"/>
+  <rect x="263" y="211" width="73" height="78" rx="1" fill="#D4A843" opacity="0.20"/>
+  <rect x="262" y="210" width="75" height="80" rx="2" fill="none" stroke="#C9A96E" stroke-width="2"/>
+  <line x1="299" y1="210" x2="299" y2="290" stroke="#C9A96E" stroke-width="1.2" opacity="0.45"/>
+  <line x1="262" y1="250" x2="337" y2="250" stroke="#C9A96E" stroke-width="1.2" opacity="0.45"/>
+  <rect x="259" y="288" width="81" height="5" fill="#C9A96E" opacity="0.3"/>
+
+  <!-- Upper window R -->
+  <rect x="395" y="210" width="75" height="80" rx="2" fill="#C9A96E" opacity="0.07"/>
+  <rect x="396" y="211" width="73" height="78" rx="1" fill="#D4A843" opacity="0.10"/>
+  <rect x="395" y="210" width="75" height="80" rx="2" fill="none" stroke="#C9A96E" stroke-width="2"/>
+  <line x1="432" y1="210" x2="432" y2="290" stroke="#C9A96E" stroke-width="1.2" opacity="0.45"/>
+  <line x1="395" y1="250" x2="470" y2="250" stroke="#C9A96E" stroke-width="1.2" opacity="0.45"/>
+  <rect x="392" y="288" width="81" height="5" fill="#C9A96E" opacity="0.3"/>
+
+  <!-- Balcony / iron lacework band -->
+  <rect x="100" y="300" width="400" height="6" fill="#C9A96E" opacity="0.55"/>
+  <!-- Lacework spindles (simplified repeating pattern) -->
+  <g fill="none" stroke="#C9A96E" stroke-width="1.5" opacity="0.3">
+    <path d="M110 300 Q110 316 120 316 Q130 316 130 300"/>
+    <path d="M130 300 Q130 316 140 316 Q150 316 150 300"/>
+    <path d="M150 300 Q150 316 160 316 Q170 316 170 300"/>
+    <path d="M170 300 Q170 316 180 316 Q190 316 190 300"/>
+    <path d="M190 300 Q190 316 200 316 Q210 316 210 300"/>
+    <path d="M210 300 Q210 316 220 316 Q230 316 230 300"/>
+    <path d="M230 300 Q230 316 240 316 Q250 316 250 300"/>
+    <path d="M250 300 Q250 316 260 316 Q270 316 270 300"/>
+    <path d="M270 300 Q270 316 280 316 Q290 316 290 300"/>
+    <path d="M290 300 Q290 316 300 316 Q310 316 310 300"/>
+    <path d="M310 300 Q310 316 320 316 Q330 316 330 300"/>
+    <path d="M330 300 Q330 316 340 316 Q350 316 350 300"/>
+    <path d="M350 300 Q350 316 360 316 Q370 316 370 300"/>
+    <path d="M370 300 Q370 316 380 316 Q390 316 390 300"/>
+    <path d="M390 300 Q390 316 400 316 Q410 316 410 300"/>
+    <path d="M410 300 Q410 316 420 316 Q430 316 430 300"/>
+    <path d="M430 300 Q430 316 440 316 Q450 316 450 300"/>
+    <path d="M450 300 Q450 316 460 316 Q470 316 470 300"/>
+    <path d="M470 300 Q470 316 480 316 Q490 316 490 300"/>
+  </g>
+  <rect x="100" y="313" width="400" height="5" fill="#C9A96E" opacity="0.35"/>
+
+  <!-- ── Ground floor ── -->
+  <rect x="100" y="318" width="400" height="92" fill="url(#facade-lower)"/>
+
+  <!-- Ground floor window L (arched) -->
+  <path d="M142 400 L142 346 Q142 325 163 325 Q184 325 184 346 L184 400 Z" fill="#C9A96E" opacity="0.08"/>
+  <path d="M143 400 L143 347 Q143 326 163 326 Q183 326 183 347 L183 400 Z" fill="#D4A843" opacity="0.10"/>
+  <path d="M142 400 L142 346 Q142 325 163 325 Q184 325 184 346 L184 400 Z" fill="none" stroke="#C9A96E" stroke-width="2"/>
+  <line x1="163" y1="325" x2="163" y2="400" stroke="#C9A96E" stroke-width="1" opacity="0.35"/>
+  <line x1="142" y1="363" x2="184" y2="363" stroke="#C9A96E" stroke-width="1" opacity="0.35"/>
+  <!-- Arch keystone -->
+  <rect x="159" y="323" width="8" height="6" fill="#C9A96E" opacity="0.4"/>
+
+  <!-- Ground floor door (double arched) -->
+  <path d="M258 410 L258 355 Q258 318 300 318 Q342 318 342 355 L342 410 Z" fill="#C9A96E" opacity="0.18"/>
+  <path d="M258 410 L258 355 Q258 318 300 318 Q342 318 342 355 L342 410 Z" fill="none" stroke="#C9A96E" stroke-width="2.5"/>
+  <!-- Transom fanlight (warm glow) -->
+  <path d="M259 355 Q259 319 300 319 Q341 319 341 355 Z" fill="#D4A843" opacity="0.35"/>
+  <!-- Fanlight spokes -->
+  <line x1="300" y1="319" x2="300" y2="355" stroke="#C9A96E" stroke-width="1.5" opacity="0.5"/>
+  <line x1="270" y1="324" x2="300" y2="355" stroke="#C9A96E" stroke-width="1"   opacity="0.35"/>
+  <line x1="330" y1="324" x2="300" y2="355" stroke="#C9A96E" stroke-width="1"   opacity="0.35"/>
+  <!-- Door panels -->
+  <rect x="261" y="358" width="35" height="50" rx="1" fill="#C9A96E" opacity="0.08" stroke="#C9A96E" stroke-width="1"/>
+  <rect x="304" y="358" width="35" height="50" rx="1" fill="#C9A96E" opacity="0.08" stroke="#C9A96E" stroke-width="1"/>
+  <!-- Door knobs -->
+  <circle cx="293" cy="385" r="4" fill="#C9A96E" opacity="0.75"/>
+  <circle cx="307" cy="385" r="4" fill="#C9A96E" opacity="0.75"/>
+  <!-- Door keystone -->
+  <rect x="295" y="316" width="10" height="7" fill="#C9A96E" opacity="0.45"/>
+
+  <!-- Ground floor window R (arched) -->
+  <path d="M416 400 L416 346 Q416 325 437 325 Q458 325 458 346 L458 400 Z" fill="#C9A96E" opacity="0.08"/>
+  <path d="M417 400 L417 347 Q417 326 437 326 Q457 326 457 347 L457 400 Z" fill="#D4A843" opacity="0.10"/>
+  <path d="M416 400 L416 346 Q416 325 437 325 Q458 325 458 346 L458 400 Z" fill="none" stroke="#C9A96E" stroke-width="2"/>
+  <line x1="437" y1="325" x2="437" y2="400" stroke="#C9A96E" stroke-width="1" opacity="0.35"/>
+  <line x1="416" y1="363" x2="458" y2="363" stroke="#C9A96E" stroke-width="1" opacity="0.35"/>
+  <rect x="433" y="323" width="8" height="6" fill="#C9A96E" opacity="0.4"/>
+
+  <!-- Entry steps -->
+  <rect x="255" y="405" width="90" height="7"  fill="#3A2418"/>
+  <rect x="249" y="410" width="102" height="7" fill="#2C1A10"/>
+
+  <!-- Lamp posts -->
+  <rect x="212" y="318" width="5" height="92" fill="#4A3020"/>
+  <circle cx="214" cy="310" r="18" fill="url(#lamp-glow)"/>
+  <circle cx="214" cy="310" r="9"  fill="#D4A843" opacity="0.55"/>
+  <circle cx="214" cy="310" r="5"  fill="#FAF7F2" opacity="0.6"/>
+
+  <rect x="383" y="318" width="5" height="92" fill="#4A3020"/>
+  <circle cx="385" cy="310" r="18" fill="url(#lamp-glow)"/>
+  <circle cx="385" cy="310" r="9"  fill="#D4A843" opacity="0.55"/>
+  <circle cx="385" cy="310" r="5"  fill="#FAF7F2" opacity="0.6"/>
+
+  <!-- Foreground garden hedges -->
+  <ellipse cx="162" cy="410" rx="58" ry="14" fill="#0e0806" opacity="0.85"/>
+  <ellipse cx="438" cy="410" rx="58" ry="14" fill="#0e0806" opacity="0.85"/>
+
+  <!-- Ground edge highlight -->
+  <rect x="0" y="404" width="600" height="2" fill="#C9A96E" opacity="0.08"/>
+</svg>

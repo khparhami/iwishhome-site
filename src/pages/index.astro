@@ -63,20 +63,32 @@ const stats = [
         <p class="hero-note">No obligation. 30-minute discovery call.</p>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="hero-card">
-          <div class="hero-card-badge">Off-Market</div>
-          <div class="hero-card-suburb">Balmain, NSW</div>
-          <div class="hero-card-price">Secured $85k under asking</div>
-          <div class="hero-card-footer">
-            <span>3 bed · 2 bath · Period terrace</span>
-          </div>
-        </div>
-        <div class="hero-card hero-card--small">
-          <div class="hero-card-badge">Auction Win</div>
-          <div class="hero-card-suburb">Newtown, NSW</div>
-          <div class="hero-card-price">Won on first bid</div>
-          <div class="hero-card-footer">
-            <span>2 bed · 1 bath · Victorian</span>
+        <div class="house-frame">
+          <img
+            src="/house-hero.svg"
+            alt="Elegant Sydney terrace home"
+            class="house-img"
+            width="600"
+            height="500"
+            loading="eager"
+          />
+          <div class="house-cards">
+            <div class="hero-card">
+              <div class="hero-card-badge">Off-Market</div>
+              <div class="hero-card-suburb">Balmain, NSW</div>
+              <div class="hero-card-price">Secured $85k under asking</div>
+              <div class="hero-card-footer">
+                <span>3 bed · 2 bath · Period terrace</span>
+              </div>
+            </div>
+            <div class="hero-card hero-card--small">
+              <div class="hero-card-badge">Auction Win</div>
+              <div class="hero-card-suburb">Newtown, NSW</div>
+              <div class="hero-card-price">Won on first bid</div>
+              <div class="hero-card-footer">
+                <span>2 bed · 1 bath · Victorian</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -248,25 +260,45 @@ const stats = [
   }
 
   .hero-visual {
+    position: relative;
+  }
+
+  .house-frame {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+  }
+
+  .house-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-xl);
+  }
+
+  .house-cards {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    right: 1rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: flex-end;
   }
 
   .hero-card {
-    background: rgba(250,247,242,0.08);
-    border: 1px solid rgba(250,247,242,0.15);
+    background: rgba(18,8,3,0.72);
+    border: 1px solid rgba(201,169,110,0.25);
     border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    width: 280px;
-    backdrop-filter: blur(8px);
+    padding: 1.25rem;
+    flex: 1;
+    backdrop-filter: blur(12px);
   }
 
   .hero-card--small {
-    width: 240px;
-    align-self: flex-start;
-    margin-left: 3rem;
+    flex: 0 0 auto;
+    width: 175px;
   }
 
   .hero-card-badge {
@@ -522,18 +554,14 @@ const stats = [
       grid-template-columns: 1fr;
       gap: 3rem;
     }
-    .hero-visual {
-      align-items: flex-start;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    .hero-card--small { margin-left: 0; }
+    .house-cards { flex-direction: column; align-items: stretch; bottom: 1rem; }
+    .hero-card--small { width: 100%; }
     .trust-inner { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 560px) {
     .hero { padding: 4rem 1.25rem 3.5rem; }
-    .hero-visual { display: none; }
+    .house-cards { display: none; }
     .trust-inner { grid-template-columns: repeat(2, 1fr); }
     .step { grid-template-columns: 56px 1fr; gap: 1rem; }
     .testimonial { padding: 1.75rem 1.5rem; }
